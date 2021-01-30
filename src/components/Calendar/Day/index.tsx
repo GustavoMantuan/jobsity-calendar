@@ -1,3 +1,5 @@
+import { Badge } from '../Badge/styles'
+import DailyReminders from '../DailyReminders'
 import * as S from './styles'
 
 export type DayTypes = {
@@ -24,6 +26,8 @@ const Day = ({
       <S.DayNumber isWeekend={isWeekend} isDisabled={isDisabled}>
         {currentDate.getDate()}
       </S.DayNumber>
+      <DailyReminders currentDate={currentDate} />
+
       <p>{currentDate.toDateString()}</p>
     </S.Day>
   )

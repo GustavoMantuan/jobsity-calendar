@@ -5,22 +5,11 @@ const ReminderForm = () => {
     <S.FormWrapper>
       <S.MultipleInputWrapper>
         <S.InputWrapper>
-          <S.Input
-            maxWidth={'25vw'}
-            zIndex={10}
-            type="color"
-            name="reminder-color"
-          />
+          <S.Input zIndex={10} type="color" name="reminder-color" />
           <S.PlaceholderActive>Color</S.PlaceholderActive>
         </S.InputWrapper>
         <S.InputWrapper>
-          <S.Input
-            maxWidth={'25vw'}
-            zIndex={10}
-            required
-            type="time"
-            name="reminder-time"
-          />
+          <S.Input zIndex={10} required type="time" name="reminder-time" />
           <S.PlaceholderActive>Time</S.PlaceholderActive>
         </S.InputWrapper>
       </S.MultipleInputWrapper>

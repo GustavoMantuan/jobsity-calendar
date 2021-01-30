@@ -6,12 +6,13 @@ type InputTypes = {
 }
 
 export const FormWrapper = styled.div`
-  width: 90%;
+  width: 100%;
   height: 100%;
   background: transparent;
   padding: 30px;
-  align-items: center;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 
 export const Placeholder = styled.span`
@@ -33,13 +34,15 @@ export const PlaceholderActive = styled.span`
 export const InputWrapper = styled.div`
   position: relative;
   font-size: 1rem;
-  padding: 20px;
+  padding: 20px 10px;
   display: flex;
   justify-self: flex-start;
+  width: 100%;
 `
 
 export const MultipleInputWrapper = styled.div`
   display: flex;
+  width: 100%;
 `
 
 export const Input = styled.input<InputTypes>`
@@ -51,7 +54,7 @@ export const Input = styled.input<InputTypes>`
   background: #f2f2f2;
   padding: 1rem;
   min-height: 80px;
-  width: 51vw;
+  width: 100%;
   font-size: 1rem;
   border-radius: 3px;
   outline: none;
@@ -70,7 +73,7 @@ export const Input = styled.input<InputTypes>`
     font-size: 0.9rem;
     color: #fff;
   }
-  ${({ zIndex, maxWidth = '51vw' }) => css`
+  ${({ zIndex, maxWidth = '100%' }) => css`
     z-index: ${zIndex};
     max-width: ${maxWidth};
   `}
@@ -85,7 +88,7 @@ export const TextArea = styled.textarea`
   background: #f2f2f2;
   padding: 1.2rem;
   border-radius: 3px;
-  width: 51vw;
+  width: 100%;
   resize: none;
   outline: none;
   &:focus {
@@ -101,12 +104,15 @@ export const TextArea = styled.textarea`
 
 export const SubmitButton = styled.button`
   min-width: 100px;
-  width: 50vw;
+  width: 98%;
   padding: 16px 32px;
   border-radius: 4px;
   border: none;
-  background: #011638;
+  background: #52d1dc;
   color: #fff;
   font-size: 24px;
   cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
 `
