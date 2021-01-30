@@ -14,12 +14,12 @@ import Day from './Day'
 import { getWeeksInMonth } from 'date-fns'
 
 export type CalendarType = {
-  currentMonthName: string
   currentMonthNumber: number
   currentDate: Date
+  setShowModal: any
 }
 
-const Calendar = ({ currentDate }: CalendarType) => {
+const Calendar = ({ currentDate, setShowModal }: CalendarType) => {
   const [daysInMonth, setDaysInMonth] = useState(getDaysInMonth(currentDate))
   const [firstWeekDay, setFirstWeekDay] = useState(
     startOfMonth(currentDate).getDay()
@@ -52,7 +52,13 @@ const Calendar = ({ currentDate }: CalendarType) => {
         })}
       {Array.from({ length: daysInMonth }, (v, k) => {
         const date = new Date(new Date().setDate(k + 1))
-        return <Day isWeekend={isWeekend(date)} currentDate={date} />
+        return (
+          <Day
+            setShowModal={setShowModal}
+            isWeekend={isWeekend(date)}
+            currentDate={date}
+          />
+        )
       })}
       {Array.from({ length: 6 - lastWeekDay }, (v, k) => {
         const date = new Date(addMonths(currentDate, 1).setDate(k + 1))

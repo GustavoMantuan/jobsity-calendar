@@ -5,10 +5,13 @@ type CalendarWrapperType = {
 }
 
 export const CalendarWrapper = styled.div<CalendarWrapperType>`
-  height: 100%;
+  height: 95%;
   display: grid;
   grid-template-columns: repeat(7, minmax(150px, 300px));
   ${({ weeksInMonth }) => css`
-    grid-template-rows: 1fr repeat(${weeksInMonth}, minmax(150px, 300px));
+    grid-template-rows: 1fr repeat(
+        ${weeksInMonth},
+        calc(80vh / ${weeksInMonth})
+      );
   `}
 `

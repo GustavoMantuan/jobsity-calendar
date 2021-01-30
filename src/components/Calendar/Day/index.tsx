@@ -4,13 +4,19 @@ export type DayTypes = {
   currentDate: Date
   isDisabled?: boolean
   isWeekend: boolean
+  setShowModal?: any
 }
 
-const Day = ({ currentDate, isWeekend, isDisabled = false }: DayTypes) => {
+const Day = ({
+  currentDate,
+  isWeekend,
+  isDisabled = false,
+  setShowModal
+}: DayTypes) => {
   return (
     <S.Day
       key={`${currentDate}`}
-      onClick={() => alert(currentDate.toDateString())}
+      onClick={() => setShowModal(true)}
       title="Click to add a reminder"
       isWeekend={isWeekend}
       isDisabled={isDisabled}

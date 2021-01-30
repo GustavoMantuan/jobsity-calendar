@@ -9,6 +9,7 @@ export const DayNumber = styled.p<DayNumberType>`
   font-size: 0.9rem;
   text-align: left;
   position: absolute;
+  z-index: 0;
   font-weight: bold;
   padding: 5px 0 0 10px;
   color: gray;
