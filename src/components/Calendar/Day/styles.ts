@@ -6,17 +6,14 @@ type DayNumberType = {
 }
 
 export const DayNumber = styled.p<DayNumberType>`
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-align: left;
-  position: absolute;
   z-index: 0;
   font-weight: bold;
   padding: 5px 0 0 15px;
-  width: calc(90% / 7);
   color: gray;
   ${({ isWeekend, isDisabled }) => css`
     color: ${isDisabled ? 'grey' : isWeekend ? 'blue' : 'black'};
-    background-color: ${isWeekend ? '#cecece' : 'white'};
   `}
 `
 
@@ -27,7 +24,7 @@ export const Day = styled.div<DayNumberType>`
   &:hover {
     box-shadow: inset 0 0 0.3em grey;
     ${DayNumber} {
-      font-size: 1rem;
+      font-size: 1.3rem;
     }
   }
   ${({ isWeekend, isDisabled }) => css`

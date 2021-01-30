@@ -34,7 +34,9 @@ const ReminderForm = () => {
         />
         <S.Placeholder>Reminder</S.Placeholder>
       </S.InputWrapper>
-      <S.SubmitButton title="Create a reminder">Submit</S.SubmitButton>
+      <S.InputWrapper>
+        <S.SubmitButton title="Create a reminder">Submit</S.SubmitButton>
+      </S.InputWrapper>
     </S.FormWrapper>
   )
 }

@@ -104,7 +104,7 @@ export const TextArea = styled.textarea`
 
 export const SubmitButton = styled.button`
   min-width: 100px;
-  width: 98%;
+  width: 100%;
   padding: 16px 32px;
   border-radius: 4px;
   border: none;
