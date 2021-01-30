@@ -20,16 +20,29 @@ export type CalendarType = {
 }
 
 const Calendar = ({ currentDate, setShowModal }: CalendarType) => {
-  const [daysInMonth, setDaysInMonth] = useState(getDaysInMonth(currentDate))
-  const [firstWeekDay, setFirstWeekDay] = useState(
-    startOfMonth(currentDate).getDay()
-  )
-  const [lastWeekDay, setLastWeekDay] = useState(
-    endOfMonth(currentDate).getDay()
-  )
-  const [lastDayOfOfLastMonth, setLastDayOfMonth] = useState(
-    lastDayOfMonth(subMonths(currentDate, 1)).getDate()
-  )
+  const [daysInMonth, setDaysInMonth] = useState(0)
+  const [firstWeekDay, setFirstWeekDay] = useState(0)
+  const [lastWeekDay, setLastWeekDay] = useState(0)
+  const [lastDayOfOfLastMonth, setLastDayOfMonth] = useState(0)
+
+  console.log('at calendar', currentDate)
+  console.log('at calendar firstWeekDay', daysInMonth)
+  console.log('at calendar daysInMonth', firstWeekDay)
+  console.log('at calendar lastWeekDay', lastWeekDay)
+  console.log('at calendar lastDayOfOfLastMonth', lastDayOfOfLastMonth)
+
+  useEffect(() => {
+    setDaysInMonth(getDaysInMonth(currentDate))
+    setFirstWeekDay(startOfMonth(currentDate).getDay())
+    setLastWeekDay(endOfMonth(currentDate).getDay())
+    setLastDayOfMonth(lastDayOfMonth(subMonths(currentDate, 1)).getDate())
+  }, [currentDate])
+
+  console.log('at calendar', currentDate)
+  console.log('at calendar firstWeekDay', firstWeekDay)
+  console.log('at calendar daysInMonth', daysInMonth)
+  console.log('at calendar lastWeekDay', lastWeekDay)
+  console.log('at calendar lastDayOfOfLastMonth', lastDayOfOfLastMonth)
 
   return (
     <S.CalendarWrapper weeksInMonth={getWeeksInMonth(currentDate)}>
@@ -37,10 +50,11 @@ const Calendar = ({ currentDate, setShowModal }: CalendarType) => {
       {Array.from(Array(firstWeekDay), (_, x) => x + 1)
         .reverse()
         .map((day) => {
-          lastDayOfMonth
+          console.log('antes', currentDate)
           const date = new Date(
             subMonths(currentDate, 1).setDate(lastDayOfOfLastMonth - day + 1)
           )
+          console.log('depois', date)
           return (
             <Day
               isDisabled={true}
@@ -51,7 +65,7 @@ const Calendar = ({ currentDate, setShowModal }: CalendarType) => {
           )
         })}
       {Array.from({ length: daysInMonth }, (v, k) => {
-        const date = new Date(new Date().setDate(k + 1))
+        const date = new Date(new Date(currentDate).setDate(k + 1))
         return (
           <Day
             setShowModal={setShowModal}

@@ -1,28 +1,28 @@
 import Calendar from 'components/Calendar'
-import { useEffect, useState } from 'react'
+import { useState, useContext } from 'react'
 import * as S from './styles'
 
-import getMonth from 'date-fns/getMonth'
 import MonthSelection from 'components/MonthSelection'
 import Modal from 'components/Modal'
+import { ReminderContext } from 'context'
 
 const Main = ({
   title = 'Jobsity Calendar',
   description = 'TypeScript, ReactJS, NextJS e Styled Components'
 }) => {
-  const [currentDate, setCurrentDate] = useState(new Date())
+  const { currentDate, currentMonth } = useContext(ReminderContext)
   const [showModal, setShowModal] = useState(false)
 
-  useEffect(() => {}, [])
+  console.log('at component main', currentDate)
 
   return (
     <S.Wrapper>
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
-      <MonthSelection currentMonth={getMonth(currentDate)} />
+      <MonthSelection currentMonth={currentMonth} />
 
       <Calendar
-        currentMonthNumber={getMonth(currentDate)}
+        currentMonthNumber={currentMonth}
         currentDate={currentDate}
         setShowModal={setShowModal}
       />
