@@ -25,12 +25,6 @@ const Calendar = ({ currentDate, setShowModal }: CalendarType) => {
   const [lastWeekDay, setLastWeekDay] = useState(0)
   const [lastDayOfOfLastMonth, setLastDayOfMonth] = useState(0)
 
-  console.log('at calendar', currentDate)
-  console.log('at calendar firstWeekDay', daysInMonth)
-  console.log('at calendar daysInMonth', firstWeekDay)
-  console.log('at calendar lastWeekDay', lastWeekDay)
-  console.log('at calendar lastDayOfOfLastMonth', lastDayOfOfLastMonth)
-
   useEffect(() => {
     setDaysInMonth(getDaysInMonth(currentDate))
     setFirstWeekDay(startOfMonth(currentDate).getDay())
@@ -50,7 +44,7 @@ const Calendar = ({ currentDate, setShowModal }: CalendarType) => {
             <Day
               isDisabled={true}
               isWeekend={isWeekend(date)}
-              key={`${day}-${day}`}
+              key={`${day}-${date}`}
               currentDate={date}
             />
           )
@@ -59,7 +53,7 @@ const Calendar = ({ currentDate, setShowModal }: CalendarType) => {
         const date = new Date(new Date(currentDate).setDate(k + 1))
         return (
           <Day
-            setShowModal={setShowModal}
+            key={`${k}-${date}`}
             isWeekend={isWeekend(date)}
             currentDate={date}
           />
@@ -69,6 +63,7 @@ const Calendar = ({ currentDate, setShowModal }: CalendarType) => {
         const date = new Date(addMonths(currentDate, 1).setDate(k + 1))
         return (
           <Day
+            key={`${k}-${date}`}
             isWeekend={isWeekend(date)}
             currentDate={date}
             isDisabled={true}

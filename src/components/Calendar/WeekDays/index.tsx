@@ -10,11 +10,14 @@ const WeekDaysArray = [
   'Saturday'
 ]
 
-const WeekDays = () =>
-  WeekDaysArray.map((weekday, index) => (
+const WeekDays = () => {
+  return (
     <>
-      <S.WeekDay key={index}>{weekday}</S.WeekDay>
+      {WeekDaysArray.map((weekday) => (
+        <S.WeekDay key={weekday}>{weekday}</S.WeekDay>
+      ))}
     </>
-  ))
+  )
+}
 
 export default WeekDays
