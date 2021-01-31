@@ -10,6 +10,7 @@ export const DELETE_REMINDER = 'DELETE_REMINDER'
 export const OPEN_MODAL = 'OPEN_MODAL'
 export const CLOSE_MODAL = 'CLOSE_MODAL'
 export const SELECT_REMINDER = 'SELECT_REMINDER'
+export const CLEAR_REMINDERS = 'CLEAR_REMINDERS'
 
 type Action = {
   type: string
@@ -91,6 +92,16 @@ export default function CalendarPage() {
                   ...action.payload
                 }
               ])
+            }
+          }
+        }
+        case CLEAR_REMINDERS: {
+          const { reminderDate } = action.payload
+          return {
+            ...prevState,
+            reminders: {
+              ...prevState.reminders,
+              [reminderDate]: []
             }
           }
         }
@@ -187,6 +198,12 @@ export default function CalendarPage() {
         dispatch({
           type: DELETE_REMINDER,
           payload: { reminderDate, id }
+        })
+      },
+      clearReminders: ({ reminderDate }: Reminder) => {
+        dispatch({
+          type: CLEAR_REMINDERS,
+          payload: { reminderDate }
         })
       },
       currentDate: state.currentDate,

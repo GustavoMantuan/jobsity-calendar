@@ -11,6 +11,7 @@ export type State = {
   closeModal?: any
   reminderDate?: string
   selectReminder?: any
+  clearReminders?: any
 }
 
 export interface Reminder {
