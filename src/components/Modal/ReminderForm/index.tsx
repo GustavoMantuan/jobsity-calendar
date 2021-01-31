@@ -7,9 +7,13 @@ type ReminderTypes = {
 }
 
 const ReminderForm = ({ selectedReminder }: ReminderTypes) => {
-  const { addReminder, closeModal, reminderDate, editReminder } = useContext(
-    ReminderContext
-  )
+  const {
+    addReminder,
+    closeModal,
+    reminderDate,
+    editReminder,
+    deleteReminder
+  } = useContext(ReminderContext)
   const [color, setColor] = useState('#007bff')
   const [time, setTime] = useState('')
   const [reminder, setReminder] = useState('')
@@ -105,11 +109,22 @@ const ReminderForm = ({ selectedReminder }: ReminderTypes) => {
           Submit
         </S.SubmitButton>
       </S.InputWrapper>
-      <S.InputWrapper>
-        <S.DeleteButton type="submit" title="Deletereminder">
-          Delete
-        </S.DeleteButton>
-      </S.InputWrapper>
+      {selectedReminder?.id && (
+        <S.InputWrapper>
+          <S.DeleteButton
+            onClick={() =>
+              deleteReminder({
+                reminderDate: selectedReminder.reminderDate,
+                id: selectedReminder.id
+              })
+            }
+            type="button"
+            title="Delete reminder"
+          >
+            Delete
+          </S.DeleteButton>
+        </S.InputWrapper>
+      )}
     </S.FormWrapper>
   )
 }

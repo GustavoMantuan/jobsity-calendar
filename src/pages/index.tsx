@@ -6,6 +6,7 @@ import cuid from 'cuid'
 export const SET_CURRENT_DATE = 'SET_CURRENT_DATE'
 export const ADD_REMINDER = 'ADD_REMINDER'
 export const EDIT_REMINDER = 'EDIT_REMINDER'
+export const DELETE_REMINDER = 'DELETE_REMINDER'
 export const OPEN_MODAL = 'OPEN_MODAL'
 export const CLOSE_MODAL = 'CLOSE_MODAL'
 export const SELECT_REMINDER = 'SELECT_REMINDER'
@@ -78,10 +79,10 @@ export default function CalendarPage() {
           const remindersLeft = prevState.reminders[reminderDate].filter(
             (reminder: Reminder) => reminder.id !== id
           )
-          console.log('remindersLeft', remindersLeft)
           return {
             ...prevState,
             isModalOpen: false,
+            selectedReminder: undefined,
             reminders: {
               ...prevState.reminders,
               [reminderDate]: [...remindersLeft].concat([
@@ -93,7 +94,21 @@ export default function CalendarPage() {
             }
           }
         }
-
+        case DELETE_REMINDER: {
+          const { reminderDate, id } = action.payload
+          const remindersLeft = prevState.reminders[reminderDate].filter(
+            (reminder: Reminder) => reminder.id !== id
+          )
+          return {
+            ...prevState,
+            isModalOpen: false,
+            selectedReminder: undefined,
+            reminders: {
+              ...prevState.reminders,
+              [reminderDate]: [...remindersLeft]
+            }
+          }
+        }
         default:
           return {
             ...prevState
@@ -166,6 +181,12 @@ export default function CalendarPage() {
         dispatch({
           type: SELECT_REMINDER,
           payload: { reminder, time, color, reminderDate, city, id }
+        })
+      },
+      deleteReminder: ({ reminderDate, id }: Reminder) => {
+        dispatch({
+          type: DELETE_REMINDER,
+          payload: { reminderDate, id }
         })
       },
       currentDate: state.currentDate,
