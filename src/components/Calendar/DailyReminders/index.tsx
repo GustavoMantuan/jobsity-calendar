@@ -5,6 +5,7 @@ import { Badge } from '../Badge/styles'
 import * as S from './styles'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import WeatherForecast from './WeatherForecast'
 
 type DailyRemindersTypes = {
   currentDate: Date
@@ -45,7 +46,7 @@ const DailyReminders = ({ currentDate }: DailyRemindersTypes) => {
     <S.DailyRemindersWrapper>
       {dailyReminders && dailyReminders.length > 0 && (
         <S.CleanButton
-          title="Clean reminders"
+          title="Clear reminders"
           aria-label="clear reminders"
           onClick={(e) => {
             e.preventDefault()
@@ -65,7 +66,14 @@ const DailyReminders = ({ currentDate }: DailyRemindersTypes) => {
           key={reminder.id}
           color={reminder.color}
         >
-          {reminder.time} - {reminder.reminder} | city: {reminder.city}
+          <>
+            <span>{reminder.reminder}</span>
+            <WeatherForecast
+              time={reminder.time}
+              currentDate={currentDate}
+              city={reminder.city}
+            />
+          </>
         </Badge>
       ))}
     </S.DailyRemindersWrapper>
