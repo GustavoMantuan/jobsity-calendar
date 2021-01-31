@@ -8,6 +8,8 @@ export type State = {
   selectedReminder?: Reminder
   openModal?: any
   addReminder?: any
+  editReminder?: any
+  deleteReminder?: any
   closeModal?: any
   reminderDate?: string
   selectReminder?: any
