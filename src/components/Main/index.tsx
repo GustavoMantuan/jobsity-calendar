@@ -1,5 +1,5 @@
 import Calendar from 'components/Calendar'
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import * as S from './styles'
 
 import MonthSelection from 'components/MonthSelection'
@@ -10,26 +10,16 @@ const Main = ({
   title = 'Jobsity Calendar',
   description = 'TypeScript, ReactJS, NextJS e Styled Components'
 }) => {
-  const {
-    currentDate,
-    currentMonth,
-    isModalOpen,
-    closeModal,
-    reminders,
-    selectedReminder
-  } = useContext(ReminderContext)
-  console.log('selected', selectedReminder, reminders)
+  const { currentDate, currentMonth, isModalOpen, closeModal } = useContext(
+    ReminderContext
+  )
   return (
     <S.Wrapper>
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
       <MonthSelection currentMonth={currentMonth} />
 
-      <Calendar
-        currentMonthNumber={currentMonth}
-        currentDate={currentDate}
-        setShowModal={() => closeModal()}
-      />
+      <Calendar currentDate={currentDate} />
       <Modal showModal={isModalOpen} setShowModal={() => closeModal()} />
     </S.Wrapper>
   )

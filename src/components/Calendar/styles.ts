@@ -7,7 +7,7 @@ type CalendarWrapperType = {
 export const CalendarWrapper = styled.div<CalendarWrapperType>`
   height: 95%;
   display: grid;
-  grid-template-columns: repeat(7, minmax(150px, 300px));
+  grid-template-columns: repeat(7, minmax(85px, 300px));
   ${({ weeksInMonth }) => css`
     grid-template-rows: 1fr repeat(
         ${weeksInMonth},

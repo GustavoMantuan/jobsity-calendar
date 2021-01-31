@@ -1,20 +1,26 @@
 import { useReducer, useMemo } from 'react'
 import Main from 'components/Main'
-import { Reminder, ReminderContext, State } from 'context'
+import {
+  ADD_REMINDER,
+  CLEAR_REMINDERS,
+  CLOSE_MODAL,
+  DELETE_REMINDER,
+  EDIT_REMINDER,
+  OPEN_MODAL,
+  Reminder,
+  ReminderContext,
+  SELECT_REMINDER,
+  SET_CURRENT_DATE,
+  State,
+  INITIAL_STATE,
+  ReminderId
+} from 'context'
 import cuid from 'cuid'
-
-export const SET_CURRENT_DATE = 'SET_CURRENT_DATE'
-export const ADD_REMINDER = 'ADD_REMINDER'
-export const EDIT_REMINDER = 'EDIT_REMINDER'
-export const DELETE_REMINDER = 'DELETE_REMINDER'
-export const OPEN_MODAL = 'OPEN_MODAL'
-export const CLOSE_MODAL = 'CLOSE_MODAL'
-export const SELECT_REMINDER = 'SELECT_REMINDER'
-export const CLEAR_REMINDERS = 'CLEAR_REMINDERS'
 
 type Action = {
   type: string
-  payload: any | Reminder
+  //eslint-disable-next-line
+  payload: any
 }
 
 export default function CalendarPage() {
@@ -127,12 +133,7 @@ export default function CalendarPage() {
       }
     },
     {
-      currentMonth: new Date().getMonth(),
-      currentDate: new Date(),
-      isModalOpen: false,
-      reminders: {},
-      selectedReminder: undefined,
-      reminderDate: ''
+      ...INITIAL_STATE
     }
   )
 
@@ -194,13 +195,13 @@ export default function CalendarPage() {
           payload: { reminder, time, color, reminderDate, city, id }
         })
       },
-      deleteReminder: ({ reminderDate, id }: Reminder) => {
+      deleteReminder: ({ reminderDate, id }: ReminderId) => {
         dispatch({
           type: DELETE_REMINDER,
           payload: { reminderDate, id }
         })
       },
-      clearReminders: ({ reminderDate }: Reminder) => {
+      clearReminders: ({ reminderDate }: ReminderId) => {
         dispatch({
           type: CLEAR_REMINDERS,
           payload: { reminderDate }

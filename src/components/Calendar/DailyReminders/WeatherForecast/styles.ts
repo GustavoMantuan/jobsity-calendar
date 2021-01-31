@@ -12,4 +12,21 @@ export const WeatherText = styled.span`
   width: 85px;
   text-overflow: ellipsis;
   overflow: hidden;
+  position: relative;
+`
+
+export const WeatherTooltip = styled.span`
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  &:hover {
+    visibility: visible;
+  }
+}
 `

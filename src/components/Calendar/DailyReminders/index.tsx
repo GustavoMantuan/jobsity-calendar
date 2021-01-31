@@ -15,7 +15,7 @@ const DailyReminders = ({ currentDate }: DailyRemindersTypes) => {
   const { reminders, selectReminder, clearReminders } = useContext(
     ReminderContext
   )
-  const [dailyReminders, setDailyReminders] = useState([])
+  const [dailyReminders, setDailyReminders] = useState<Reminder[]>([])
 
   useEffect(() => {
     setDailyReminders(
@@ -67,6 +67,7 @@ const DailyReminders = ({ currentDate }: DailyRemindersTypes) => {
           color={reminder.color}
         >
           <>
+            <span>{reminder.time} </span>
             <span>{reminder.reminder}</span>
             <WeatherForecast
               time={reminder.time}

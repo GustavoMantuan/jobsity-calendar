@@ -70,6 +70,7 @@ const ReminderForm = ({ selectedReminder }: ReminderTypes) => {
         <S.InputWrapper>
           <S.Input
             value={time}
+            tabIndex={0}
             onChange={(e) => setTime(e.target.value)}
             zIndex={10}
             required
@@ -84,6 +85,7 @@ const ReminderForm = ({ selectedReminder }: ReminderTypes) => {
         <S.Input
           required
           value={city}
+          tabIndex={1}
           onChange={(e) => setCity(e.target.value)}
           type="city"
           name="reminder-city"
@@ -96,6 +98,7 @@ const ReminderForm = ({ selectedReminder }: ReminderTypes) => {
         <S.TextArea
           required
           maxLength={30}
+          tabIndex={2}
           value={reminder}
           onChange={(e) => setReminder(e.target.value)}
           rows={3}
