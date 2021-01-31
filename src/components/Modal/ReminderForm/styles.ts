@@ -5,7 +5,7 @@ type InputTypes = {
   maxWidth?: string
 }
 
-export const FormWrapper = styled.div`
+export const FormWrapper = styled.form`
   width: 100%;
   height: 100%;
   background: transparent;
@@ -87,12 +87,19 @@ export const TextArea = styled.textarea`
   -moz-appearance: none;
   background: #f2f2f2;
   padding: 1.2rem;
+  color: black,
   border-radius: 3px;
   width: 100%;
   resize: none;
   outline: none;
   &:focus {
     border: none;
+  }
+  &:valid + ${Placeholder} {
+    top: 0px;
+    left: 30px;
+    font-size: 0.9rem;
+    color: #fff;
   }
   &:focus + ${Placeholder} {
     top: 0px;
@@ -115,4 +122,7 @@ export const SubmitButton = styled.button`
   &:hover {
     opacity: 0.9;
   }
+`
+export const DeleteButton = styled(SubmitButton)`
+  background: red;
 `

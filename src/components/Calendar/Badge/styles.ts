@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 type BadgeTypes = {
-  color: string
+  color?: string
 }
 
 export const Badge = styled.span<BadgeTypes>`

@@ -10,11 +10,15 @@ const Main = ({
   title = 'Jobsity Calendar',
   description = 'TypeScript, ReactJS, NextJS e Styled Components'
 }) => {
-  const { currentDate, currentMonth } = useContext(ReminderContext)
-  const [showModal, setShowModal] = useState(false)
-
-  console.log('at component main', currentDate)
-
+  const {
+    currentDate,
+    currentMonth,
+    isModalOpen,
+    closeModal,
+    reminders,
+    selectedReminder
+  } = useContext(ReminderContext)
+  console.log('selected', selectedReminder, reminders)
   return (
     <S.Wrapper>
       <S.Title>{title}</S.Title>
@@ -24,9 +28,9 @@ const Main = ({
       <Calendar
         currentMonthNumber={currentMonth}
         currentDate={currentDate}
-        setShowModal={setShowModal}
+        setShowModal={() => closeModal()}
       />
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal showModal={isModalOpen} setShowModal={() => closeModal()} />
     </S.Wrapper>
   )
 }

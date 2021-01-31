@@ -37,24 +37,15 @@ const Calendar = ({ currentDate, setShowModal }: CalendarType) => {
     setLastWeekDay(endOfMonth(currentDate).getDay())
     setLastDayOfMonth(lastDayOfMonth(subMonths(currentDate, 1)).getDate())
   }, [currentDate])
-
-  console.log('at calendar', currentDate)
-  console.log('at calendar firstWeekDay', firstWeekDay)
-  console.log('at calendar daysInMonth', daysInMonth)
-  console.log('at calendar lastWeekDay', lastWeekDay)
-  console.log('at calendar lastDayOfOfLastMonth', lastDayOfOfLastMonth)
-
   return (
     <S.CalendarWrapper weeksInMonth={getWeeksInMonth(currentDate)}>
       <WeekDays />
       {Array.from(Array(firstWeekDay), (_, x) => x + 1)
         .reverse()
         .map((day) => {
-          console.log('antes', currentDate)
           const date = new Date(
             subMonths(currentDate, 1).setDate(lastDayOfOfLastMonth - day + 1)
           )
-          console.log('depois', date)
           return (
             <Day
               isDisabled={true}

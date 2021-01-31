@@ -1,4 +1,5 @@
-import { Badge } from '../Badge/styles'
+import { ReminderContext } from 'context'
+import { useContext } from 'react'
 import DailyReminders from '../DailyReminders'
 import * as S from './styles'
 
@@ -6,19 +7,14 @@ export type DayTypes = {
   currentDate: Date
   isDisabled?: boolean
   isWeekend: boolean
-  setShowModal?: any
 }
 
-const Day = ({
-  currentDate,
-  isWeekend,
-  isDisabled = false,
-  setShowModal
-}: DayTypes) => {
+const Day = ({ currentDate, isWeekend, isDisabled = false }: DayTypes) => {
+  const { openModal } = useContext(ReminderContext)
   return (
     <S.Day
       key={`${currentDate}`}
-      onClick={() => setShowModal(true)}
+      onClick={() => openModal(currentDate.toLocaleDateString())}
       title="Click to add a reminder"
       isWeekend={isWeekend}
       isDisabled={isDisabled}
@@ -27,8 +23,6 @@ const Day = ({
         {currentDate.getDate()}
       </S.DayNumber>
       <DailyReminders currentDate={currentDate} />
-
-      <p>{currentDate.toDateString()}</p>
     </S.Day>
   )
 }

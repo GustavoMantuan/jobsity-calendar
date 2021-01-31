@@ -22,7 +22,7 @@ export const ModalWrapper = styled.div`
   position: relative;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  z-index: 100;
+  z-index: 9999;
 `
 
 export const Title = styled.h1`
