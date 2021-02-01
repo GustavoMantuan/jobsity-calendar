@@ -42,7 +42,7 @@ const Calendar = ({ currentDate }: CalendarType) => {
             <Day
               isDisabled={true}
               isWeekend={isWeekend(date)}
-              key={`${day}-${date}`}
+              key={`${date}`}
               currentDate={date}
             />
           )
@@ -50,18 +50,14 @@ const Calendar = ({ currentDate }: CalendarType) => {
       {Array.from({ length: daysInMonth }, (v, k) => {
         const date = new Date(new Date(currentDate).setDate(k + 1))
         return (
-          <Day
-            key={`${k}-${date}`}
-            isWeekend={isWeekend(date)}
-            currentDate={date}
-          />
+          <Day key={`${date}`} isWeekend={isWeekend(date)} currentDate={date} />
         )
       })}
       {Array.from({ length: 6 - lastWeekDay }, (v, k) => {
         const date = new Date(addMonths(currentDate, 1).setDate(k + 1))
         return (
           <Day
-            key={`${k}-${date}`}
+            key={`${date}`}
             isWeekend={isWeekend(date)}
             currentDate={date}
             isDisabled={true}
