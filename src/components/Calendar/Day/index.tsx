@@ -13,9 +13,8 @@ const Day = ({ currentDate, isWeekend, isDisabled = false }: DayTypes) => {
   const { openModal } = useContext(ReminderContext)
   return (
     <S.Day
-      key={`${currentDate}`}
       onClick={() => openModal(currentDate.toLocaleDateString())}
-      title="Click to add a reminder"
+      title={`Click to add a reminder at ${currentDate.toLocaleDateString()}`}
       isWeekend={isWeekend}
       isDisabled={isDisabled}
     >
