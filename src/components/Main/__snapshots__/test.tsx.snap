@@ -1,0 +1,737 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Main /> should render the Main 1`] = `
+.c5 {
+  height: 95%;
+  display: grid;
+  grid-template-columns: repeat(7,minmax(85px,300px));
+  grid-template-rows: 1fr repeat( 5,calc(80vh / 5) );
+}
+
+.c6 {
+  color: white;
+  background-color: blue;
+  margin: 0;
+  font-size: 1.2rem;
+  padding: 2.5px 0;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  margin-top: 0.1rem;
+  position: relative;
+}
+
+.c9 {
+  font-size: 1.2rem;
+  text-align: left;
+  z-index: 0;
+  font-weight: bold;
+  padding: 5px 0 0 15px;
+  color: gray;
+  color: grey;
+}
+
+.c12 {
+  font-size: 1.2rem;
+  text-align: left;
+  z-index: 0;
+  font-weight: bold;
+  padding: 5px 0 0 15px;
+  color: gray;
+  color: black;
+}
+
+.c14 {
+  font-size: 1.2rem;
+  text-align: left;
+  z-index: 0;
+  font-weight: bold;
+  padding: 5px 0 0 15px;
+  color: gray;
+  color: blue;
+}
+
+.c15 {
+  border: 1px solid gray;
+  cursor: pointer;
+  overflow: auto;
+  background-color: white;
+  pointer-events: none;
+}
+
+.c15:hover {
+  box-shadow: inset 0 0 0.3em grey;
+}
+
+.c15:hover .c8 {
+  font-size: 1.3rem;
+}
+
+.c7 {
+  border: 1px solid gray;
+  cursor: pointer;
+  overflow: auto;
+  background-color: #cecece;
+  pointer-events: none;
+}
+
+.c7:hover {
+  box-shadow: inset 0 0 0.3em grey;
+}
+
+.c7:hover .c8 {
+  font-size: 1.3rem;
+}
+
+.c11 {
+  border: 1px solid gray;
+  cursor: pointer;
+  overflow: auto;
+  background-color: white;
+  pointer-events: all;
+}
+
+.c11:hover {
+  box-shadow: inset 0 0 0.3em grey;
+}
+
+.c11:hover .c8 {
+  font-size: 1.3rem;
+}
+
+.c13 {
+  border: 1px solid gray;
+  cursor: pointer;
+  overflow: auto;
+  background-color: #cecece;
+  pointer-events: all;
+}
+
+.c13:hover {
+  box-shadow: inset 0 0 0.3em grey;
+}
+
+.c13:hover .c8 {
+  font-size: 1.3rem;
+}
+
+.c0 {
+  color: #fff;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 {
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.c2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.c3 {
+  width: 80%;
+  padding: 1rem;
+  margin: 30px 0 30px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  font-size: 4rem;
+}
+
+<main
+  class="c0"
+>
+  <h1
+    class="c1"
+  >
+    Jobsity Calendar
+  </h1>
+  <h2
+    class="c2"
+  >
+    TypeScript, ReactJS, NextJS e Styled Components
+  </h2>
+  <div
+    class="c3"
+  >
+    <svg
+      aria-hidden="true"
+      class="svg-inline--fa fa-angle-left fa-w-8 fa-5x "
+      cursor="pointer"
+      data-icon="angle-left"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 256 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"
+        fill="currentColor"
+      />
+    </svg>
+    <div
+      class=""
+    >
+      <h1
+        class="c4"
+      >
+        February
+      </h1>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="svg-inline--fa fa-angle-right fa-w-8 fa-5x "
+      cursor="pointer"
+      data-icon="angle-right"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 256 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+  <div
+    class="c5"
+  >
+    <p
+      class="c6"
+    >
+      Sunday
+    </p>
+    <p
+      class="c6"
+    >
+      Monday
+    </p>
+    <p
+      class="c6"
+    >
+      Tuesday
+    </p>
+    <p
+      class="c6"
+    >
+      Wednesday
+    </p>
+    <p
+      class="c6"
+    >
+      Thursday
+    </p>
+    <p
+      class="c6"
+    >
+      Friday
+    </p>
+    <p
+      class="c6"
+    >
+      Saturday
+    </p>
+    <div
+      class="c7"
+      title="Click to add a reminder at 31/01/2021"
+    >
+      <p
+        class="c8 c9"
+      >
+        31
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 01/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        1
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 02/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        2
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 03/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        3
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 04/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        4
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 05/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        5
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c13"
+      title="Click to add a reminder at 06/02/2021"
+    >
+      <p
+        class="c8 c14"
+      >
+        6
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c13"
+      title="Click to add a reminder at 07/02/2021"
+    >
+      <p
+        class="c8 c14"
+      >
+        7
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 08/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        8
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 09/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        9
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 10/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        10
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 11/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        11
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 12/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        12
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c13"
+      title="Click to add a reminder at 13/02/2021"
+    >
+      <p
+        class="c8 c14"
+      >
+        13
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c13"
+      title="Click to add a reminder at 14/02/2021"
+    >
+      <p
+        class="c8 c14"
+      >
+        14
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 15/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        15
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 16/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        16
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 17/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        17
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 18/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        18
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 19/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        19
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c13"
+      title="Click to add a reminder at 20/02/2021"
+    >
+      <p
+        class="c8 c14"
+      >
+        20
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c13"
+      title="Click to add a reminder at 21/02/2021"
+    >
+      <p
+        class="c8 c14"
+      >
+        21
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 22/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        22
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 23/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        23
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 24/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        24
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 25/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        25
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c11"
+      title="Click to add a reminder at 26/02/2021"
+    >
+      <p
+        class="c8 c12"
+      >
+        26
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c13"
+      title="Click to add a reminder at 27/02/2021"
+    >
+      <p
+        class="c8 c14"
+      >
+        27
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c13"
+      title="Click to add a reminder at 28/02/2021"
+    >
+      <p
+        class="c8 c14"
+      >
+        28
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c15"
+      title="Click to add a reminder at 01/03/2021"
+    >
+      <p
+        class="c8 c9"
+      >
+        1
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c15"
+      title="Click to add a reminder at 02/03/2021"
+    >
+      <p
+        class="c8 c9"
+      >
+        2
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c15"
+      title="Click to add a reminder at 03/03/2021"
+    >
+      <p
+        class="c8 c9"
+      >
+        3
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c15"
+      title="Click to add a reminder at 04/03/2021"
+    >
+      <p
+        class="c8 c9"
+      >
+        4
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c15"
+      title="Click to add a reminder at 05/03/2021"
+    >
+      <p
+        class="c8 c9"
+      >
+        5
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+    <div
+      class="c7"
+      title="Click to add a reminder at 06/03/2021"
+    >
+      <p
+        class="c8 c9"
+      >
+        6
+      </p>
+      <div
+        class="c10"
+      />
+    </div>
+  </div>
+</main>
+`;
