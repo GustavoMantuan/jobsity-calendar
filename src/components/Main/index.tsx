@@ -18,7 +18,6 @@ const Main = ({
       <S.Title>{title}</S.Title>
       <S.Description>{description}</S.Description>
       <MonthSelection currentMonth={currentMonth} />
-
       <Calendar currentDate={currentDate} />
       <Modal showModal={isModalOpen} setShowModal={() => closeModal()} />
     </S.Wrapper>

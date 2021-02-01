@@ -50,6 +50,8 @@ const ReminderForm = ({ selectedReminder }: ReminderTypes) => {
 
   return (
     <S.FormWrapper
+      name="form"
+      role="form"
       onSubmit={(e) => {
         e.preventDefault()
         submitReminder()
